@@ -1,10 +1,10 @@
 import React from 'react'
+import {useForm} from "react-hook-form";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTwitter, faFacebookF} from "@fortawesome/free-brands-svg-icons";
-import {useForm} from "react-hook-form";
 
 export default function Login() {
-    const { register, handleSubmit } = useForm();
+    const {register, handleSubmit} = useForm();
     const onSubmit = handleSubmit((data) => {
         console.log(data)
     })
@@ -12,7 +12,7 @@ export default function Login() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#f3e1e3] font-montserrat">
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-                <div className="bg-white rounded-[10px] shadow-lg shadow-gray-500 flex w-2/3 max-w-4xl">
+                <div className="flex w-2/3 max-w-4xl bg-white rounded-[10px] shadow-lg shadow-gray-500">
                     <div className="w-1/2 p-2"> {/* LEFT SIDE BEGIN ============== */}
                         <form action="" onSubmit={onSubmit}>
                             <div className="py-10">
@@ -48,19 +48,23 @@ export default function Login() {
                                     </a>
                                 </div>
                                 <div>
-                                    <button
-                                            className='w-full py-2.5 my-4 w-36 bg-[#FF4B2B] hover:bg-[#ff6e54] text-white text-sm font-bold uppercase rounded-full tracking-widest'>Log
-                                        In
+                                    <button className='w-full py-2.5 my-4 w-36 bg-[#FF4B2B] hover:bg-[#ff6e54]
+                                        text-white text-sm font-bold uppercase rounded-full tracking-widest'>
+                                        Log In
                                     </button>
                                 </div>
                             </div>
                         </form>
-                    </div> {/* RIGHT SIDE BEGIN ============== */}
-                    <div
-                        className="w-1/2 bg-gradient-to-r from-[#FE454A] to-[#FE436B] text-white rounded-r-[10px] py-48 px-14">
-                        <h2 className="text-3xl font-extrabold mb-4">React + Tailwindcss Login Form</h2>
-                        <p>This login form was created using React and Tailwindcss. FontAwesome was used for social
-                            icons.</p>
+                    </div>
+                    {/* RIGHT SIDE BEGIN ============== */}
+                    <div className="w-1/2 bg-gradient-to-r from-[#FE454A] to-[#FE436B] text-white rounded-r-[10px] py-48 px-14">
+                        <h2 className="text-3xl font-extrabold mb-4">
+                            React + Tailwindcss Login Form
+                        </h2>
+                        <p>
+                            This login form was created using React and Tailwindcss. FontAwesome was used for social
+                            icons.
+                        </p>
                     </div>
                 </div>
             </main>
