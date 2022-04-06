@@ -1,8 +1,11 @@
 # react-login-page
 Created a react + tailwindcss login page for training purposes.
 
-![source](login.png)
+## Source
+![source](src/assets/login.png)
 
+## My Version
+![source](src/assets/mylogin.png)
 
 ### Study Sources
 
